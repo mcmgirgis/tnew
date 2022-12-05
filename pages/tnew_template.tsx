@@ -64,7 +64,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="TNEW-outer bg-white">
         <div className="container bg-white text-black mx-auto sm:px-4 md:px-12 lg:px-0">
           <Header variant="white" />
