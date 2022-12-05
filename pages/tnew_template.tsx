@@ -32,7 +32,7 @@ const Home: NextPage = () => {
       margin-bottom: 5rem;
     }
 
-    // Adjust the max width of each of the two columns.
+    /* Adjust the max width of each of the two columns. */
     .tn-account-login-page > .row > .col-sm-6:first-child {
       padding-right: 8rem;
     }
