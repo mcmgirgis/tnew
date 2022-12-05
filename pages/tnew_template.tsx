@@ -4,11 +4,16 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   const CSS = `
+    html {
+      font-size: 16px;
+    }
+    
     .TNEW-content {
       margin-bottom: 10rem;
     }
     
     h1 {
+      font-size: 4rem;
       line-height: 1.1;
       margin-bottom: 1rem;
     }
@@ -27,7 +32,7 @@ const Home: NextPage = () => {
     input[type='password'] {
       border-radius: 0;
       border: 2px solid #111111;
-      height: 56px;
+      height: 3.5rem;
     }
     
     input[type='text']::placeholder,
@@ -44,21 +49,56 @@ const Home: NextPage = () => {
       /* Microsoft Edge */
       color: #111111;
     }
+
+    .tn-login-component h2,
+    .tn-create-heading {
+      border-bottom: 2px solid #111111;
+      color: #111111;
+      font-size: 2.125rem;
+      padding-bottom: 1rem;
+    }
     
     .tn-login-component .control-label {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
     }
     
     .tn-login-component .control-label > span:first-child {
-      clip: rect(1px, 1px, 1px, 1px);
-      clip-path: inset(50%);
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
+      font-weight: 400;
+      font-size: 1.1875rem;
+    }
+
+    .tn-register-button,
+    .tn-account-login-forgot-login-link {
+      height: 3.5rem;
+      border-radius: 0;
+      border: 2px solid #111;
+      width: 100%;
+      background: #ffffff;
+      color: #111;
+      font-weight: 700;
+      font-size: 1.125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tn-account-login-forgot-login-link {
+      border: 0;
+    }
+
+    #tn-login-button {
+      height: 3.5rem;
+      border-radius: 0;
+      border: 0;
+      width: 100%;
+      background: #111111;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   `;
 
