@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/template': { page: '/tnew_template' },
+    };
+  },
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -13,6 +21,7 @@ const nextConfig = {
       'static01.nyt.com',
       'piction.clevelandart.org',
     ],
+    unoptimized: true, // Required for next export
   },
   assetPrefix: process.env.ASSET_BASE_URL,
   webpack(config) {

@@ -10,21 +10,26 @@
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
+    "build-static": "next build && next export -o _site",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "stripnext": "node build-tools/strip-nextjs-runtime.js"
   },
   "dependencies": {
     "@next/font": "^13.0.3",
     "@svgr/webpack": "^6.5.0",
+    "cheerio": "^1.0.0-rc.12",
     "dompurify": "^2.4.0",
+    "fs": "^0.0.1-security",
     "iconoir-react": "^5.3.2",
     "next": "^13.0.0",
     "next-drupal": "^1.5.0",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-aria": "^3.19.0",
     "react-dom": "^18.2.0",
