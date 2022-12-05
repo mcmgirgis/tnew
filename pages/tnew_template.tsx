@@ -7,6 +7,11 @@ const Home: NextPage = () => {
     html {
       font-size: 16px;
     }
+
+    a:focus, a:hover {
+      color: #111111;
+      text-decoration: none;
+    }
     
     .TNEW-content {
       margin-bottom: 10rem;
@@ -25,6 +30,14 @@ const Home: NextPage = () => {
     
     .tn-header-component {
       margin-bottom: 5rem;
+    }
+
+    // Adjust the max width of each of the two columns.
+    .tn-account-login-page > .row > .col-sm-6:first-child {
+      padding-right: 8rem;
+    }
+    .tn-account-login-page > .row > .col-sm-6:last-child {
+      padding-left: 8rem;
     }
     
     input[type='text'],
@@ -50,12 +63,23 @@ const Home: NextPage = () => {
       color: #111111;
     }
 
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .tn-required-field {
+      color: #111111;
+      font-style: normal;
+      font-size: 0.9375rem;
+    }
+
     .tn-login-component h2,
     .tn-create-heading {
       border-bottom: 2px solid #111111;
       color: #111111;
       font-size: 2.125rem;
       padding-bottom: 1rem;
+      margin-bottom: 3rem;
     }
     
     .tn-login-component .control-label {
