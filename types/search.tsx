@@ -1,0 +1,44 @@
+import { ImagesResponse } from './images';
+
+export interface SearchResult {
+  id: number;
+  accession_number: string;
+  share_license_status: string;
+  tombstone: string;
+  current_location?: any;
+  title: string;
+  title_in_original_language: string;
+  series: any;
+  series_in_original_language: any;
+  creation_date: string;
+  creation_date_earliest: number;
+  creation_date_latest: number;
+  creators: any;
+  culture: string[];
+  technique: string;
+  support_materials: any[];
+  department: string;
+  collection: string;
+  type: string;
+  measurements: string;
+  dimensions: { unframed: [Object] };
+  state_of_the_work?: any;
+  edition_of_the_work?: any;
+  creditline: string;
+  copyright: any;
+  inscriptions: any[];
+  exhibitions: any;
+  provenance: Record<string, string>[];
+  find_spot: any;
+  related_works: [];
+  former_accession_numbers: [];
+  fun_fact: any;
+  digital_description: any;
+  wall_description: string;
+  external_resources: { wikidata: []; internet_archive: [] };
+  citations: any[];
+  catalogue_raisonne: any;
+  url: string;
+  images: ImagesResponse;
+  updated_at: string;
+}

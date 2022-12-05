@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@font-face {
+  font-family: 'Fold Grotesque';
+  src: url('/fonts/fold-grotesque-bold-italic-pro.eot');
+  src: url('/fonts/fold-grotesque-bold-italic-pro.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fold-grotesque-bold-italic-pro.woff2') format('woff2'),
+    url('/fonts/fold-grotesque-bold-italic-pro.woff') format('woff'),
+    url('/fonts/fold-grotesque-bold-italic-pro.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fold Grotesque';
+  src: url('/fonts/fold-grotesque-bold-pro.eot');
+  src: url('/fonts/fold-grotesque-bold-pro.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fold-grotesque-bold-pro.woff2') format('woff2'),
+    url('/fonts/fold-grotesque-bold-pro.woff') format('woff'),
+    url('/fonts/fold-grotesque-bold-pro.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fold Grotesque';
+  src: url('/fonts/fold-grotesque-italic-pro.eot');
+  src: url('/fonts/fold-grotesque-italic-pro.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fold-grotesque-italic-pro.woff2') format('woff2'),
+    url('/fonts/fold-grotesque-italic-pro.woff') format('woff'),
+    url('/fonts/fold-grotesque-italic-pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fold Grotesque';
+  src: url('/fonts/fold-grotesque-light-italic-pro.eot');
+  src: url('/fonts/fold-grotesque-light-italic-pro.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fold-grotesque-light-italic-pro.woff2') format('woff2'),
+    url('/fonts/fold-grotesque-light-italic-pro.woff') format('woff'),
+    url('/fonts/fold-grotesque-light-italic-pro.ttf') format('truetype');
+  font-weight: light;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fold Grotesque';
+  src: url('/fonts/fold-grotesque-light-pro.eot');
+  src: url('/fonts/fold-grotesque-light-pro.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fold-grotesque-light-pro.woff2') format('woff2'),
+    url('/fonts/fold-grotesque-light-pro.woff') format('woff'),
+    url('/fonts/fold-grotesque-light-pro.ttf') format('truetype');
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fold Grotesque';
+  src: url('/fonts/fold-grotesque-medium-pro.eot');
+  src: url('/fonts/fold-grotesque-medium-pro.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fold-grotesque-medium-pro.woff2') format('woff2'),
+    url('/fonts/fold-grotesque-medium-pro.woff') format('woff'),
+    url('/fonts/fold-grotesque-medium-pro.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fold Grotesque';
+  src: url('/fonts/fold-grotesque-regular-pro.eot');
+  src: url('/fonts/fold-grotesque-regular-pro.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/fold-grotesque-regular-pro.woff2') format('woff2'),
+    url('/fonts/fold-grotesque-regular-pro.woff') format('woff'),
+    url('/fonts/fold-grotesque-regular-pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, Fold Grotesque, Sans;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 500;
+}
+
+@layer base {
+  svg {
+    @apply stroke-2;
+  }
+
+  .textLg {
+    @apply sm:text-[1rem] md:text-2xxl lg:text-[1.5rem] leading-[180%] md:leading-[200%];
+  }
+
+  .textMd {
+    @apply sm:text-[13px] md:text-[1rem] lg:text-[19px] leading-[160%] md:leading-[180%];
+  }
+
+  .textSm {
+    @apply sm:text-[11px] md:text-[13] lg:text-[15px] leading-[160%] md:leading-[150%];
+  }
+
+  h1 {
+    @apply sm:text-4xl md:text-5xl lg:text-7xxl leading-[110%] -tracking-[0.02em];
+  }
+
+  h2 {
+    @apply sm:text-28 md:text-3xxlg lg:text-5xxl leading-[130%] -tracking-[0.02em];
+  }
+
+  h3 {
+    @apply sm:text-21 md:text-28 lg:text-34 leading-[120%] -tracking-[0.01em];
+  }
+
+  h4 {
+    @apply sm:text-lg md:text-xl lg:text-2xl leading-[130%];
+  }
+
+  h5 {
+    @apply text-lg md:text-3xl;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+  }
+}
+
+.react-player__preview {
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+}
+
+.react-player__play-icon {
+  border-color: transparent transparent transparent #111111 !important;
+}
+
+.react-player__shadow {
+  background: white !important;
+  border-radius: 0 !important;
+  border: 2px solid #111111;
+  width: 100px !important;
+  margin-left: 26px;
+  margin-bottom: 26px;
+}
+
+@media only screen and (max-width: 768px) {
+  .react-player__play-icon {
+    border-width: 11px 0 11px 20px !important;
+  }
+
+  .react-player__shadow {
+    height: 40px !important;
+    width: 60px !important;
+    margin-left: 14px;
+    margin-bottom: 14px;
+  }
+}

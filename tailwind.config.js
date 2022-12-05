@@ -1,0 +1,93 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    colors: ({ colors }) => ({
+      inherit: colors.inherit,
+      current: colors.current,
+      transparent: colors.transparent,
+      black: '#111111',
+      white: colors.white,
+      slate: colors.slate,
+      gray: colors.gray,
+      zinc: colors.zinc,
+      neutral: colors.neutral,
+      stone: colors.stone,
+      red: colors.red,
+      orange: colors.orange,
+      amber: colors.amber,
+      yellow: colors.yellow,
+      lime: colors.lime,
+      green: colors.green,
+      emerald: colors.emerald,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      violet: colors.violet,
+      purple: colors.purple,
+      fuchsia: colors.fuchsia,
+      pink: colors.pink,
+      rose: colors.rose,
+    }),
+    fontFamily: {
+      sans: ['Fold Grotesque', ...fontFamily.sans],
+      serif: ['Roboto Serif', ...fontFamily.serif],
+    },
+    screens: {
+      sm: '0px',
+      md: '1024px',
+      lg: '1716px',
+      xl: '1920px',
+    },
+    extend: {
+      container: {
+        screens: {
+          sm: '1356px',
+          lg: '1620px',
+        },
+      },
+      colors: {
+        'grey-03': '#6F6F6F',
+        'yellow-02': '#F9D405',
+        skyblue: '#3CA8FA',
+        'blue-02': '#3037D3',
+        'blue-03': '#474EF5',
+        'blue-04': '#5C63FB',
+        'purple-02': '#773EA9',
+        'pink-02': '#D3356E',
+        'purple-03': '#8B5BB6',
+        'off-white': '#F5F5F5',
+      },
+      spacing: {
+        37: '9.375rem',
+      },
+      fontSize: {
+        21: '1.3125rem',
+        '2xxl': '1.25rem',
+        28: '1.75rem',
+        '3xxl': '2rem',
+        34: '2.125rem',
+        '3xxlg': '2.5rem',
+        '4xxl': '3.5rem',
+        '5xxl': '3.375rem',
+        '7xxl': '7.75rem',
+      },
+      boxShadow: {
+        'mobile-actions': '0px 0px 40px rgba(0, 0, 0, 0.1)',
+        'left-down-blue-03': '-12px 12px rgb(71, 78, 245)',
+      },
+      fontFamily: {
+        'fold-grotesque': ['Fold Grotesque', ...fontFamily.sans],
+        'roboto-serif': ['Roboto Serif', ...fontFamily.serif],
+      },
+    },
+  },
+  plugins: [require('@tailwindcss/typography')],
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+};
